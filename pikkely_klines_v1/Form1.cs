@@ -83,5 +83,13 @@ namespace pikkely_klines_v1
         {
 
         }
+
+        private void loadHullok_Click(object sender, EventArgs e)
+        {
+            panel1.Controls.Clear(); // Töröljük a panel tartalmát, ha van
+            HullokUserControl hullokControl = new HullokUserControl();
+            hullokControl.Dock = DockStyle.Fill; // Kitölti a panelt
+            panel1.Controls.Add(hullokControl); // Hozzáadjuk a panelhez
+        }
     }
 }

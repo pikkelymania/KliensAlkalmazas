@@ -46,6 +46,7 @@
             button1.TabIndex = 0;
             button1.Text = "Királypiton";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // label1
             // 
@@ -65,6 +66,7 @@
             button2.TabIndex = 2;
             button2.Text = "Gabonasikló";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // button3
             // 
@@ -74,6 +76,7 @@
             button3.TabIndex = 3;
             button3.Text = "Leopárdgekkó";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // button4
             // 
@@ -83,6 +86,7 @@
             button4.TabIndex = 4;
             button4.Text = "Vitorlásgekkó";
             button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
             // 
             // button5
             // 
@@ -92,9 +96,11 @@
             button5.TabIndex = 5;
             button5.Text = "Szakállas agáma";
             button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
             // 
             // dataGridView1
             // 
+            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(260, 57);
             dataGridView1.Name = "dataGridView1";

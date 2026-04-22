@@ -40,9 +40,9 @@
             // 
             // btnTestConnection
             // 
-            btnTestConnection.Location = new Point(1090, 16);
+            btnTestConnection.Location = new Point(350, 12);
             btnTestConnection.Name = "btnTestConnection";
-            btnTestConnection.Size = new Size(302, 46);
+            btnTestConnection.Size = new Size(1042, 46);
             btnTestConnection.TabIndex = 0;
             btnTestConnection.Text = "kapcsolat tesztelése";
             btnTestConnection.UseVisualStyleBackColor = true;
@@ -51,7 +51,7 @@
             // lblResult
             // 
             lblResult.AutoSize = true;
-            lblResult.Location = new Point(1090, 65);
+            lblResult.Location = new Point(350, 61);
             lblResult.Name = "lblResult";
             lblResult.Size = new Size(230, 32);
             lblResult.TabIndex = 1;
@@ -59,21 +59,21 @@
             // 
             // txtRawData
             // 
-            txtRawData.Location = new Point(1398, 16);
+            txtRawData.Location = new Point(658, 12);
             txtRawData.Multiline = true;
             txtRawData.Name = "txtRawData";
             txtRawData.ScrollBars = ScrollBars.Vertical;
-            txtRawData.Size = new Size(136, 268);
+            txtRawData.Size = new Size(876, 268);
             txtRawData.TabIndex = 2;
             // 
             // dgvProducts
             // 
             dgvProducts.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dgvProducts.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvProducts.Location = new Point(1540, 16);
+            dgvProducts.Location = new Point(800, 12);
             dgvProducts.Name = "dgvProducts";
             dgvProducts.RowHeadersWidth = 82;
-            dgvProducts.Size = new Size(120, 268);
+            dgvProducts.Size = new Size(860, 268);
             dgvProducts.TabIndex = 3;
             dgvProducts.CellContentClick += dataGridView1_CellContentClick;
             // 
@@ -85,6 +85,7 @@
             loadHullok.TabIndex = 4;
             loadHullok.Text = "Hüllők";
             loadHullok.UseVisualStyleBackColor = true;
+            loadHullok.Click += loadHullok_Click;
             // 
             // loadHalak
             // 
