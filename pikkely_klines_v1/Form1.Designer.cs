@@ -32,12 +32,15 @@
             lblResult = new Label();
             txtRawData = new TextBox();
             dgvProducts = new DataGridView();
+            loadHullok = new Button();
+            loadHalak = new Button();
+            panel1 = new Panel();
             ((System.ComponentModel.ISupportInitialize)dgvProducts).BeginInit();
             SuspendLayout();
             // 
             // btnTestConnection
             // 
-            btnTestConnection.Location = new Point(12, 12);
+            btnTestConnection.Location = new Point(1090, 16);
             btnTestConnection.Name = "btnTestConnection";
             btnTestConnection.Size = new Size(302, 46);
             btnTestConnection.TabIndex = 0;
@@ -48,7 +51,7 @@
             // lblResult
             // 
             lblResult.AutoSize = true;
-            lblResult.Location = new Point(12, 61);
+            lblResult.Location = new Point(1090, 65);
             lblResult.Name = "lblResult";
             lblResult.Size = new Size(230, 32);
             lblResult.TabIndex = 1;
@@ -56,29 +59,58 @@
             // 
             // txtRawData
             // 
-            txtRawData.Location = new Point(12, 96);
+            txtRawData.Location = new Point(1398, 16);
             txtRawData.Multiline = true;
             txtRawData.Name = "txtRawData";
             txtRawData.ScrollBars = ScrollBars.Vertical;
-            txtRawData.Size = new Size(733, 268);
+            txtRawData.Size = new Size(136, 268);
             txtRawData.TabIndex = 2;
             // 
             // dgvProducts
             // 
             dgvProducts.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dgvProducts.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvProducts.Location = new Point(12, 370);
+            dgvProducts.Location = new Point(1540, 16);
             dgvProducts.Name = "dgvProducts";
             dgvProducts.RowHeadersWidth = 82;
-            dgvProducts.Size = new Size(1648, 757);
+            dgvProducts.Size = new Size(120, 268);
             dgvProducts.TabIndex = 3;
             dgvProducts.CellContentClick += dataGridView1_CellContentClick;
+            // 
+            // loadHullok
+            // 
+            loadHullok.Location = new Point(12, 12);
+            loadHullok.Name = "loadHullok";
+            loadHullok.Size = new Size(150, 46);
+            loadHullok.TabIndex = 4;
+            loadHullok.Text = "Hüllők";
+            loadHullok.UseVisualStyleBackColor = true;
+            // 
+            // loadHalak
+            // 
+            loadHalak.Location = new Point(168, 12);
+            loadHalak.Name = "loadHalak";
+            loadHalak.Size = new Size(150, 46);
+            loadHalak.TabIndex = 5;
+            loadHalak.Text = "Halak";
+            loadHalak.UseVisualStyleBackColor = true;
+            // 
+            // panel1
+            // 
+            panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            panel1.Location = new Point(0, 346);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1670, 793);
+            panel1.TabIndex = 6;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1672, 1139);
+            Controls.Add(panel1);
+            Controls.Add(loadHalak);
+            Controls.Add(loadHullok);
             Controls.Add(dgvProducts);
             Controls.Add(txtRawData);
             Controls.Add(lblResult);
@@ -96,5 +128,8 @@
         private Label lblResult;
         private TextBox txtRawData;
         private DataGridView dgvProducts;
+        private Button loadHullok;
+        private Button loadHalak;
+        private Panel panel1;
     }
 }
