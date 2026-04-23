@@ -12,4 +12,13 @@
     <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="Hotcakes.CommerceDTO">
+      <HintPath>..\..\..\..\OneDrive\Asztali gép\Hotcakes.CommerceDTO.dll</HintPath>
+    </Reference>
+    <Reference Include="Hotcakes.Web">
+      <HintPath>..\..\..\..\OneDrive\Asztali gép\Hotcakes.Web.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>

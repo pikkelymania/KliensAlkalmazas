@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Newtonsoft.Json;
+using Hotcakes.CommerceDTO.v1.Client;
+using Hotcakes.CommerceDTO.v1.Catalog;
 
 namespace pikkely_klines_v1
 {
@@ -90,6 +92,47 @@ namespace pikkely_klines_v1
             HullokUserControl hullokControl = new HullokUserControl();
             hullokControl.Dock = DockStyle.Fill; // Kitölti a panelt
             panel1.Controls.Add(hullokControl); // Hozzáadjuk a panelhez
+        }
+
+        private async void btnProdProp_Click(object sender, EventArgs e)
+        {
+            // 1. Az API kliens beállítása a gyökér URL-lel és a kulccsal
+            string storeUrl = "http://www.pikkelymania.hu/";
+            string apiKey = "1-befdaca0-4407-469d-a078-66359f0487d2";
+
+            var api = new Api(storeUrl, apiKey);
+
+            // 2. A konkrét termék, aminek a tulajdonságait keressük
+            string targetProductBvin = "7D7B0DC5-25B1-41D0-9904-AA266C27ACA8";
+
+            try
+            {
+                // 3. A metódus hívása PONTOSAN úgy, ahogy a dokumentációban szerepel
+                var response = api.ProductPropertiesForProduct(targetProductBvin);
+
+                // 4. Ellenõrizzük, hogy a szerver visszadobott-e valamilyen hibát (pl. rossz ID)
+                if (response.Errors == null || response.Errors.Count == 0)
+                {
+                    // SIKER! A 'Content' mezõben már egy kész C# objektumlista van a tulajdonságokkal
+                    var properties = response.Content;
+
+                    // Betöltjük a DataGridView-ba, hogy lásd a mezõket és az értékeket
+                    //dataGridView1.DataSource = properties;
+
+                    // Opcionális: Visszajelzés a felhasználónak
+                    MessageBox.Show($"Sikeres lekérdezés! A terméknek {properties.Count} db beállított tulajdonsága van.", "Siker");
+                }
+                else
+                {
+                    // Ha a Hotcakes visszautasította a kérést, a hibalistában lesz az ok
+                    MessageBox.Show($"Hiba az API oldalon:\n{response.Errors[0].Description}", "Sikertelen hívás");
+                }
+            }
+            catch (Exception ex)
+            {
+                // Ez akkor fut le, ha pl. nincs interneted, vagy elírtad a storeUrl-t
+                MessageBox.Show($"Hálózati hiba történt:\n{ex.Message}", "Hiba");
+            }
         }
     }
 }

@@ -35,6 +35,7 @@
             loadHullok = new Button();
             loadHalak = new Button();
             panel1 = new Panel();
+            btnProdProp = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvProducts).BeginInit();
             SuspendLayout();
             // 
@@ -42,7 +43,7 @@
             // 
             btnTestConnection.Location = new Point(350, 12);
             btnTestConnection.Name = "btnTestConnection";
-            btnTestConnection.Size = new Size(1042, 46);
+            btnTestConnection.Size = new Size(249, 46);
             btnTestConnection.TabIndex = 0;
             btnTestConnection.Text = "kapcsolat tesztelése";
             btnTestConnection.UseVisualStyleBackColor = true;
@@ -59,21 +60,21 @@
             // 
             // txtRawData
             // 
-            txtRawData.Location = new Point(658, 12);
+            txtRawData.Location = new Point(605, 12);
             txtRawData.Multiline = true;
             txtRawData.Name = "txtRawData";
             txtRawData.ScrollBars = ScrollBars.Vertical;
-            txtRawData.Size = new Size(876, 268);
+            txtRawData.Size = new Size(272, 268);
             txtRawData.TabIndex = 2;
             // 
             // dgvProducts
             // 
             dgvProducts.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dgvProducts.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvProducts.Location = new Point(800, 12);
+            dgvProducts.Location = new Point(893, 12);
             dgvProducts.Name = "dgvProducts";
             dgvProducts.RowHeadersWidth = 82;
-            dgvProducts.Size = new Size(860, 268);
+            dgvProducts.Size = new Size(767, 268);
             dgvProducts.TabIndex = 3;
             dgvProducts.CellContentClick += dataGridView1_CellContentClick;
             // 
@@ -99,16 +100,27 @@
             // panel1
             // 
             panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            panel1.Location = new Point(0, 346);
+            panel1.Location = new Point(0, 286);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1670, 793);
+            panel1.Size = new Size(1670, 853);
             panel1.TabIndex = 6;
+            // 
+            // btnProdProp
+            // 
+            btnProdProp.Location = new Point(350, 96);
+            btnProdProp.Name = "btnProdProp";
+            btnProdProp.Size = new Size(249, 46);
+            btnProdProp.TabIndex = 7;
+            btnProdProp.Text = "button1";
+            btnProdProp.UseVisualStyleBackColor = true;
+            btnProdProp.Click += btnProdProp_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1672, 1139);
+            Controls.Add(btnProdProp);
             Controls.Add(panel1);
             Controls.Add(loadHalak);
             Controls.Add(loadHullok);
@@ -132,5 +144,6 @@
         private Button loadHullok;
         private Button loadHalak;
         private Panel panel1;
+        private Button btnProdProp;
     }
 }
