@@ -58,10 +58,8 @@ namespace pikkely_klines_v1
 
         }
 
-        // 3. LÉPÉS: Egy saját segédmetódus a megjelenítésre. Így nem kell ismételni a kódot!
         private void DisplayData(List<Product> productsToShow)
         {
-            // A BindingList jelzi a táblázatnak a változásokat (szerkesztéshez kiváló)
             dataGridView1.DataSource = new BindingList<Product>(productsToShow);
         }
 
@@ -70,14 +68,10 @@ namespace pikkely_klines_v1
         {
             if (_baseProductList != null && _baseProductList.Count > 0)
             {
-                // Szűrjük a listát a kapott paraméter (keresettSkuReszlet) alapján.
-                // A ToUpper()-t ráhúzzuk a paraméterre is, így teljesen mindegy, 
-                // kis- vagy nagybetűvel adod-e át.
                 var filtered = _baseProductList
                     .Where(p => p.Sku != null && p.Sku.ToUpper().Contains(keresettSkuReszlet.ToUpper()))
                     .ToList();
 
-                // Megjelenítés
                 DisplayData(filtered);
             }
         }
